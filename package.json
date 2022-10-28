@@ -15,5 +15,9 @@
     "url": "https://github.com/stuartfreaks/myFlix-client/issues"
   },
   "homepage": "https://github.com/stuartfreaks/myFlix-client#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
