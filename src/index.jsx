@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MainView from './components/main-view/main-view';
 
 // Import statement to indicate that you need to bundle `./index.scss`
 import './index.scss';
@@ -8,11 +9,21 @@ import './index.scss';
 class MyFlixApplication extends React.Component {
   render() {
     return (
-      <div className="my-flix">
-        <div>Good morning</div>
-      </div>
+      <MainView />
     );
   }
+}
+// MovieCard component
+render() {
+  const { movies } = this.state;
+
+  if (movies.length === 0) return <div className="main-view">The list is empty!</div>;
+
+  return (
+    <div className="main-view">
+     {movies.map(movie => <MovieCard key={movie._id} movie={movie}/>)}
+    </div>
+  );
 }
 
 // Finds the root of your app
